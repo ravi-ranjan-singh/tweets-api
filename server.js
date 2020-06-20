@@ -7,6 +7,11 @@ dotenv.config({ path: './config.env' });
 
 const app = express();
 app.use(cors());
+app.all('/*', function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "X-Requested-With");
+  next();
+});
 let T = new twit({
   consumer_key: process.env.consumer_key,
   consumer_secret: process.env.consumer_secret,
