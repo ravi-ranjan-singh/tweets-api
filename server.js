@@ -66,7 +66,7 @@ app.get('/tweets/:screenName', (req, res) => {
                 screen_name: tweet.user.screen_name,
                 profile_img: tweet.user.profile_image_url_https,
                 retweet_count: tweet.retweet_count,
-                favourites_count: tweet.favorites_count,
+                favourites_count: tweet.favorite_count,
               });
             }
           });
