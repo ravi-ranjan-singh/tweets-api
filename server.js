@@ -64,7 +64,7 @@ app.get('/tweets/:screenName', (req, res) => {
                 name: tweet.user.name,
                 content: tweet.text,
                 screen_name: tweet.user.screen_name,
-                profile_img: tweet.user.profile_imge_url_https,
+                profile_img: tweet.user.profile_image_url_https,
                 retweet_count: tweet.retweet_count,
                 favourites_count: tweet.user.favourites_count,
               });
