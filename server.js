@@ -1,10 +1,12 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const twit = require('twit');
+const cors = require('cors');
 
 dotenv.config({ path: './config.env' });
 
 const app = express();
+app.use(cors());
 let T = new twit({
   consumer_key: process.env.consumer_key,
   consumer_secret: process.env.consumer_secret,
